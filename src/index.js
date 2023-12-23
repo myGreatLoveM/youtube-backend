@@ -12,10 +12,11 @@ connectDB()
   .then(() => {
     app.on("error", (error) => {
       console.log(`App couldn't connect to database: ${e.message}`);
-      throw e
+      throw e;
     });
     app.listen(PORT, () => {
       console.log(`Server listening on port ${PORT}`);
+      console.log("-------------------------------------------");
     });
   })
   .catch((err) => {
